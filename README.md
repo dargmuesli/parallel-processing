@@ -39,8 +39,8 @@ The durations were measured as in [a_numbers](#a_numbers).
 
 |prime number usage|highest almost perfect number after 30s|
 |------------------|---------------------------------------|
-|without|8394752|
-|with||
+|without|8,394,752|
+|with|527,872|
 
 #### Diagrams
 

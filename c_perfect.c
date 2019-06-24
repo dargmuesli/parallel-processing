@@ -193,13 +193,18 @@ int main() {
                     // exit on end without further calculations
                     // as there is an insufficient amount of prime numbers to finish the current calculation
                     if (end) {
-                        printf("bye from thread %d\n", omp_get_thread_num());
-                        #pragma omp cancel parallel
+                        break;
                     }
 
                     // continue with next yet found prime
                     pointer = pointer->next;
                 } while (rest != 1);
+
+                // exit on end without further calculations
+                // as there is an insufficient amount of prime numbers to finish the current calculation
+                if (end) {
+                    break;
+                }
             } else {
 
                 // initialize the divisor sum with the neutral element of addition
