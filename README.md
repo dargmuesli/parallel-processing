@@ -17,7 +17,7 @@ This part focuses on [OpenMP](https://www.openmp.org/).
 |parallel, 16 threads|53.06|2.27|
 |parallel, 32 threads|33.62|3.59|
 
-The sequential duration was measured 18 times, each parallel duration 3 times with `n = 20000, R = 900, init_rand = 123`.
+The sequential duration was measured 18 times on the [exec partition of the ITS cluster](https://www.uni-kassel.de/its-handbuch/en/daten-dienste/wissenschaftliche-datenverarbeitung/access-and-use-of-the-cluster/partitionen.html), each parallel duration 3 times with `n = 20000, R = 900, init_rand = 123`.
 
 ### b_numbers
 [b_numbers](b_numbers.c) does the same as a_numbers, but optimized for [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access).
