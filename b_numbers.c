@@ -6,12 +6,6 @@
 #include <time.h>
 #include <zconf.h>
 
-// define an integer with padding to prevent false sharing
-struct padded_int {
-    int value;
-    char padding[60];
-};
-
 void print_matrix(int **matrix, int rows, int columns) {
     for (int row = 0; row < rows; row++) {
         for (int column = 0; column < columns; column++) {
