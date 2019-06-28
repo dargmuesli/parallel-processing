@@ -43,3 +43,7 @@ The durations were measured as in [a_numbers](#a_numbers).
 
 ![duration per thread](documentation/duration-per-thread.png)
 ![speedup per thread](documentation/speedup-per-thread.png)
+
+## Feedback
+
+In [a_numbers.c#L128](https://github.com/dargmuesli/parallel-processing/blob/dd6eb222ec1cd5771a8a36c84640d5ef526c1c5f/part-1_openmp/a_numbers.c#L128) and [b_numbers#L129](https://github.com/dargmuesli/parallel-processing/blob/dd6eb222ec1cd5771a8a36c84640d5ef526c1c5f/part-1_openmp/b_numbers.c#L129) the compiler directive `#pragma omp parallel for ...` is used within a loop over rounds and a loop over hits. This results in a creation of a thread team on every repetition of the just named loops. It would be better to create the team of threads only once, further above those loops.
