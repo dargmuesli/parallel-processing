@@ -1,7 +1,7 @@
-## Part I
+# Part I
 This part focuses on [OpenMP](https://www.openmp.org/).
 
-### a_numbers
+## a_numbers
 [a_numbers.c](a_numbers.c) calculates hits with a value that affects a value spread on a matrix.
 
 | average duration | value (s) | speedup |
@@ -16,7 +16,7 @@ This part focuses on [OpenMP](https://www.openmp.org/).
 
 The sequential duration was measured 18 times on the [exec partition of the ITS cluster](https://www.uni-kassel.de/its-handbuch/en/daten-dienste/wissenschaftliche-datenverarbeitung/access-and-use-of-the-cluster/partitionen.html), each parallel duration 3 times with `n = 20000, R = 900, init_rand = 123`.
 
-### b_numbers
+## b_numbers
 [b_numbers](b_numbers.c) does the same as a_numbers, but optimized for [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access).
 
 | average duration | value (s) | speedup |
@@ -31,7 +31,7 @@ The sequential duration was measured 18 times on the [exec partition of the ITS 
 
 The durations were measured as in [a_numbers](#a_numbers).
 
-### c_perfect
+## c_perfect
 [c_perfect](c_perfect.c) calculates primes and outputs [perfect numbers](https://en.wikipedia.org/wiki/Perfect_number) with tolerance, optionally using the generated primes.
 
 |prime number usage|highest almost perfect number after 30s|
@@ -39,7 +39,7 @@ The durations were measured as in [a_numbers](#a_numbers).
 |without|8,394,752|
 |with|527,872|
 
-#### Diagrams
+### Diagrams
 
 ![duration per thread](documentation/duration-per-thread.png)
 ![speedup per thread](documentation/speedup-per-thread.png)
