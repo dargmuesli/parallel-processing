@@ -39,6 +39,6 @@ Each duration was measured 3 times on the [exec partition of the ITS cluster](ht
 ![duration per thread](documentation/duration-per-threads-and-places.png)
 
 ### Feedback
-The `asyncAt` calls in BuddyLcm.java#L182-L185 could've been merged into a single one to reduce the amount of individual network traffic creation.
+The `asyncAt` calls in [BuddyLcm.java#L182-L185](https://github.com/dargmuesli/parallel-processing/blob/06b606c01693bbf4191fcc4ce618ad0cc51d1df8/part-2_apgas_cuda/1_apgas_buddy-lcm/src/groupP/BuddyLcm.java#L182-L185) could've been merged into a single one to reduce the amount of individual network traffic creation.
 Also, for some thread numbers the output is incorrect.
 This is most likely owed to the fact that the second matrix is also divided between places, but it logically shouldn't.
