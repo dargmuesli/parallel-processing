@@ -7,4 +7,5 @@ Time measurement analysis was not part of the task.
 
 ### Feedback
 The reviewers stated that this solution was by far the quickest out of all solutions submitted by this year's teams.
-There will be futher tests to confirm this.
+This result is valid for a limited `n`, for large `n`s the output is incorrect.
+As possible way to circumvent this issue would be to implement [Grid-Stride Loops](https://devblogs.nvidia.com/cuda-pro-tip-write-flexible-kernels-grid-stride-loops/).
